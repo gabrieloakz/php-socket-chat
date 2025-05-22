@@ -1,35 +1,32 @@
-# Chat via Socket em PHP
+# Chat Web em PHP
 
-Este é um projeto simples de chat implementado usando sockets em PHP, permitindo comunicação entre múltiplos clientes através de um servidor central.
+Este é um projeto simples de chat web implementado em PHP puro, com suporte a múltiplas salas e logs de mensagens.
+
+## Funcionalidades
+
+- Interface web moderna e responsiva
+- Múltiplas salas de chat (Geral, Jogos, Tecnologia)
+- Logs de mensagens por sala
+- Atualização automática das mensagens
+- Nomes de usuário aleatórios
 
 ## Requisitos
 
 - PHP 7.0 ou superior
-- Extensão de sockets do PHP habilitada
+- Servidor web (Apache, XAMPP, WAMP, etc.)
 
-## Como Executar
+## Como Usar
 
-1. Primeiro, inicie o servidor:
-```bash
-php server.php
-```
+1. Coloque o arquivo `chat.php` na pasta do seu servidor web
+2. Acesse através do navegador: `http://localhost/chat.php`
 
-2. Em outro terminal, inicie um ou mais clientes:
-```bash
-php client.php
-```
+## Estrutura
 
-3. Digite suas mensagens no terminal do cliente e pressione Enter para enviar.
-
-## Funcionalidades
-
-- Conexão múltipla de clientes
-- Comunicação em tempo real
-- Suporte para Windows e Linux
-- Processamento assíncrono de mensagens
+- `chat.php` - Arquivo principal do chat (interface e lógica)
+- `logs/` - Pasta onde são armazenados os logs das mensagens (criada automaticamente)
 
 ## Observações
 
-- O servidor deve ser iniciado antes dos clientes
-- Para encerrar o programa, pressione Ctrl+C
-- As mensagens são enviadas para todos os clientes conectados, exceto o remetente 
+- As mensagens são salvas em arquivos de log por sala
+- Cada usuário recebe um nome aleatório ao entrar
+- As mensagens são atualizadas automaticamente a cada 2 segundos 
